@@ -1,9 +1,13 @@
 <% provide(:title, "Kitten list") %>
 
 <h2>Kitten: <%= @kitten.name %></h2>
+<%= link_to "Home", root_url %>
 <%= link_to "New kitty", new_kitten_path %>
 <%= link_to "Edit kitty", edit_kitten_path %>
 <%= link_to "Delete kitty", @kitten, method: :delete %>
+
+<p><%= flash[:success] %></p>
+<p><%= flash[:error] %></p>
 
 <table>
 	<thead>

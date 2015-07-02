@@ -24,7 +24,7 @@ class KittensController < ApplicationController
 
 		if @kitten.update(kitten_params)
 			flash[:success] = "Is this the same kitty?"
-			redirect_to root_url
+			redirect_to kitten_path
 		else
 			flash[:error] = "Kitty looks the same to me"
 			render 'edit'

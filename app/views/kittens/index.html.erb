@@ -3,6 +3,9 @@
 <h2>Kitten list</h2>
 <%= link_to "New kitty", new_kitten_path %>
 
+<p><%= flash[:success] %></p>
+<p><%= flash[:error] %></p>
+
 <table>
 	<thead>
 		<tr>
