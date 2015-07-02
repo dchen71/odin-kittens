@@ -24,7 +24,7 @@ class KittensController < ApplicationController
 
 		if @kitten.update(kitten_params)
 			flash[:success] = "Is this the same kitty?"
-			redirect_to root_page
+			redirect_to root_url
 		else
 			flash[:error] = "Kitty looks the same to me"
 			render 'edit'
@@ -36,10 +36,10 @@ class KittensController < ApplicationController
 
 		if @kitten.destroy
 			flash[:success] = "You have destroyed a kitten"
-			redirect_to root_page
+			redirect_to root_url
 		else
 			flash[:error] = "Kitten could not be destroyed"
-			redirect_to root_page
+			redirect_to root_url
 		end
 
 	end

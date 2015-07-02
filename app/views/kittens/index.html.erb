@@ -1,6 +1,6 @@
 <% provide(:title, "Kitten list") %>
 
-<h1>Kittens</h1>
+<h2>Kitten list</h2>
 <%= link_to "New kitty", new_kitten_path %>
 
 <table>
@@ -15,7 +15,7 @@
 	<tbody>
 		<% @kitten.each do |kat| %>
 			<tr>
-				<td><%= kat.name %></td>
+				<td><%= link_to kat.name, kitten_path(kat) %></td>
 				<td><%= kat.age %></td>
 				<td><%= kat.softness %></td>
 				<td><%= kat.cuteness %></td>
