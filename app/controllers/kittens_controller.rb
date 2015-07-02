@@ -45,11 +45,22 @@ class KittensController < ApplicationController
 	end
 
 	def index
-		@kitten = Kitten.all
+		@kittens = Kitten.all
+
+		respond_to do |format|
+			format.html
+			format.xml { render xml: @kittens}
+			format.json { render json: @kittens}
+		end
 	end
 
 	def show
 		@kitten = Kitten.find_by(id: params[:id])
+		respond_to do |format|
+			format.html
+			format.xml { render xml: @kitten}
+			format.json { render json: @kitten}
+		end
 	end
 
 	private
