@@ -8,7 +8,7 @@ class KittensController < ApplicationController
 
 		if @kitten.save
 			flash[:success] = "Kitten successfully added nyahaha"
-			redirect_to root_page
+			redirect_to root_url
 		else
 			flash[:error] = "Error adding kitten"
 			render 'new'
@@ -55,6 +55,6 @@ class KittensController < ApplicationController
 	private
 
 	def kitten_params
-		Params.require(:kitten).permit(:name, :age, :softness, :cuteness)
+		params.require(:kitten).permit(:name, :age, :softness, :cuteness)
 	end
 end

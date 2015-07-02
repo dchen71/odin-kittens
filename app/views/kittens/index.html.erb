@@ -13,14 +13,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<% @kitten.each do |kat| %>
+		<% @kitten.each do |kat| %>
+			<tr>
 				<td><%= kat.name %></td>
 				<td><%= kat.age %></td>
 				<td><%= kat.softness %></td>
 				<td><%= kat.cuteness %></td>
-			<% end %>
-		</tr>
+			</tr>
+		<% end %>
 	</tbody>
 
 </table>
