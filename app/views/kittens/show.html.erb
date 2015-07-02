@@ -1,0 +1,26 @@
+<% provide(:title, "Kitten list") %>
+
+<h2>Kitten: <%= @kitten.name %></h2>
+<%= link_to "New kitty", new_kitten_path %>
+<%= link_to "Edit kitty", edit_kitten_path %>
+<%= link_to "Delete kitty", @kitten, method: :delete %>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Softness</th>
+			<th>Cuteness</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= @kitten.name %></td>
+			<td><%= @kitten.age %></td>
+			<td><%= @kitten.softness %></td>
+			<td><%= @kitten.cuteness %></td>
+		</tr>
+	</tbody>
+
+</table>
