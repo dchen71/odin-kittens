@@ -1,1 +1,26 @@
-<p>Meow</p>
+<% provide(:title, "Kitten list") %>
+
+<h1>Kittens</h1>
+<%= link_to "New kitty", new_kitten_path %>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Softness</th>
+			<th>Cuteness</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<% @kitten.each do |kat| %>
+				<td><%= kat.name %></td>
+				<td><%= kat.age %></td>
+				<td><%= kat.softness %></td>
+				<td><%= kat.cuteness %></td>
+			<% end %>
+		</tr>
+	</tbody>
+
+</table>
